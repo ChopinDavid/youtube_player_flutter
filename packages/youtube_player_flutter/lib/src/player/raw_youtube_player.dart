@@ -221,6 +221,12 @@ class _RawYoutubePlayerState extends State<RawYoutubePlayer>
             );
           }
         },
+        onReceivedError: (controller, request, error) {
+          print('received error');
+        },
+        onReceivedHttpError: (controller, request, errorResponse) {
+          print('received http error');
+        },
       ),
     );
   }
